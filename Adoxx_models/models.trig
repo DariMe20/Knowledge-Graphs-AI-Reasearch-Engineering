@@ -1,0 +1,93 @@
+@prefix :        <http://example.org#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cv:      <http://www.comvantage.eu/mm#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+:AI_Engineering_Pipeline-AI_Engineering_Pipeline_-_new_ {:Experiment-17967-ImageNet_Classification
+          :implements_in_model
+                  :MLModel-17979-ViT-Base_v1_2 ;
+          cv:described_in :AI_Research_Processes-AI_Research_Processes_-_new_ .
+
+    :MLModel-17979-ViT-Base_v1_2
+          a       :MLModel , cv:Instance_class ;
+          :Name   "ViT-Base v1.2" ;
+          :Owner  "Daria" ;
+          :Performance_Score "85" ;
+          :Position "NODE x:3.75cm y:7.5cm index:2" ;
+          :Status "Active" ;
+          :deploys_to :APIEndpoint-17983-vision-api ;
+          :object-id "EXPR val:17979" .
+
+    :APIEndpoint-17983-vision-api
+          a       :APIEndpoint , cv:Instance_class ;
+          :Name   "vision-api" ;
+          :Position "NODE x:4cm y:13.25cm index:3" ;
+          :depends_on :Infrastructure-17986-K8s_Cluster ;
+          :object-id "EXPR val:17983" ;
+          :powers :ProductFeature-17992-Auto_Image_Tagging .
+
+    :ProductFeature-17992-Auto_Image_Tagging
+          a       :ProductFeature , cv:Instance_class ;
+          :Name   "Auto Image Tagging" ;
+          :Position "NODE x:4cm y:19.25cm index:5" ;
+          :object-id "EXPR val:17992" .
+
+    :Infrastructure-17986-K8s_Cluster
+          a       cv:Instance_class , :Infrastructure ;
+          :Name   "K8s Cluster" ;
+          :Position "NODE x:12cm y:13cm index:4" ;
+          :object-id "EXPR val:17986" .
+
+    :Database-17976-Proprietary_data
+          a       :Database , cv:Instance_class ;
+          :Name   "Proprietary data" ;
+          :Position "NODE x:3.75cm y:2.5cm index:1" ;
+          :object-id "EXPR val:17976" ;
+          :processes_data :MLModel-17979-ViT-Base_v1_2 .
+}
+
+:AI_Research_Processes-AI_Research_Processes_-_new_ {:Experiment-17967-ImageNet_Classification
+          a       :Experiment , cv:Instance_class ;
+          :Name   "ImageNet Classification" ;
+          :Owner  "Davide" ;
+          :Performance_Score "89" ;
+          :Position "NODE x:3.25cm y:13.75cm index:5" ;
+          :Status "Active" ;
+          :implements_in_model
+                  :MLModel-17979-ViT-Base_v1_2 ;
+          :object-id "EXPR val:17967" ;
+          :uses_dataset :Dataset-17970-Dataset-17970 .
+
+    :MLModel-17979-ViT-Base_v1_2
+          cv:described_in :AI_Engineering_Pipeline-AI_Engineering_Pipeline_-_new_ .
+
+    :Hypothesis-17963-Vision_Transformers_outperform_CNNs
+          a       :Hypothesis , cv:Instance_class ;
+          :Name   "Vision Transformers outperform CNNs" ;
+          :Position "NODE x:3.25cm y:8cm index:3" ;
+          :object-id "EXPR val:17963" ;
+          :tests_validates :Experiment-17967-ImageNet_Classification .
+
+    :Dataset-17970-Dataset-17970
+          a       :Dataset , cv:Instance_class ;
+          :Name   "Dataset-17970" ;
+          :Position "NODE x:11.25cm y:13.75cm index:6" ;
+          :object-id "EXPR val:17970" .
+}
+
+:graphmetadata {:AI_Engineering_Pipeline-AI_Engineering_Pipeline_-_new_
+          a       cv:Model_class , :AI_Engineering_Pipeline ;
+          :Name   "AI Engineering Pipeline - new" ;
+          :Type   "AI Engineering Pipeline" ;
+          :Version "" ;
+          :object-id "EXPR val:17946" .
+
+    :AI_Research_Processes-AI_Research_Processes_-_new_
+          a       :AI_Research_Processes , cv:Model_class ;
+          :Name   "AI Research Processes - new" ;
+          :Type   "AI Research Processes" ;
+          :Version "" ;
+          :object-id "EXPR val:17943" .
+}
+

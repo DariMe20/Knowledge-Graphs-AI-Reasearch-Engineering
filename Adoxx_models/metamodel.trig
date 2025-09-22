@@ -1,0 +1,364 @@
+@prefix :        <http://example.org#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cv:      <http://www.comvantage.eu/mm#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+:metamodelgraph {:Date
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "Date" ;
+          cv:used_in :ExperimentResults .
+
+    :appropriate_for
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "appropriate for" ;
+          cv:used_in :Cooking_Recipes .
+
+    cv:na_relation_property
+          a       rdfs:Class ;
+          rdfs:subClassOf rdf:Property .
+
+    cv:Model_class
+          a       rdfs:Class .
+
+    :always_requires
+          a       rdf:Property , cv:na_relation_property ;
+          rdfs:label "always requires" .
+
+    :contributor_list
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "contributor list" ;
+          cv:used_in :Cooking_Recipes .
+
+    :Dataset
+          a       rdfs:Class ;
+          rdfs:label "Dataset" ;
+          rdfs:subClassOf cv:Instance_class .
+
+    :followed_By
+          a       rdfs:Class ;
+          rdfs:label "followed By" ;
+          rdfs:subClassOf cv:Relation_class .
+
+    cv:to_instance
+          a       rdf:Property .
+
+    :Type
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "Type" ;
+          cv:used_in :CookingObject .
+
+    :ComplexIngredient
+          a       rdfs:Class ;
+          rdfs:comment "Help not available." ;
+          rdfs:label "ComplexIngredient" ;
+          rdfs:subClassOf cv:Instance_class .
+
+    :Calculated
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "Calculated" ;
+          cv:used_in :CookingStep .
+
+    cv:described_in
+          a       rdf:Property .
+
+    :integrates_with
+          a       rdf:Property , cv:na_relation_property ;
+          rdfs:label "integrates with" .
+
+    :requires_ingredient_quantities
+          a       cv:table_property , rdf:Property ;
+          rdfs:label "requires ingredient quantities" ;
+          cv:used_in :CookingStep .
+
+    :Hypothesis
+          a       rdfs:Class ;
+          rdfs:label "Hypothesis" ;
+          rdfs:subClassOf cv:Instance_class .
+
+    :Cooking_Resources
+          a       rdfs:Class ;
+          rdfs:subClassOf cv:Model_class .
+
+    :uses_dataset
+          a       rdf:Property , cv:na_relation_property ;
+          rdfs:label "uses dataset" .
+
+    :CookingStep
+          a       rdfs:Class ;
+          rdfs:label "CookingStep" ;
+          rdfs:subClassOf cv:Instance_class .
+
+    :implements_in_model
+          a       rdf:Property , cv:na_relation_property ;
+          rdfs:label "implements in model" ;
+          cv:used_in :Experiment .
+
+    :Owner
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "Owner" ;
+          cv:used_in :Experiment , :MLModel .
+
+    :requires_ingredients
+          a       rdf:Property , cv:na_relation_property ;
+          rdfs:label "requires ingredients" ;
+          cv:used_in :CookingStep .
+
+    :CookingObject
+          a       rdfs:Class ;
+          rdfs:label "CookingObject" ;
+          rdfs:subClassOf cv:Instance_class .
+
+    :object-id
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:comment """ComplexIngredient: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""" , """MLModel: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""" , """CookingStep: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""" , """APIEndpoint: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""" , """ProductFeature: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""" , """CookingIngredient: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""" , """Start: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""" , """Stop: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""" , """Experiment: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""" , """Infrastructure: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""" , """CookingObject: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""" , """Database: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""" , """Dataset: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""" , """Hypothesis: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""" ;
+          rdfs:label "object-id" ;
+          cv:used_in :ProductFeature , :Hypothesis , :Database , :CookingStep , :MLModel , :CookingObject , :Infrastructure , :Experiment , :Stop , :Dataset , :CookingIngredient , :APIEndpoint , :Start , :ComplexIngredient .
+
+    cv:from_instance
+          a       rdf:Property .
+
+    :AI_Research_Processes
+          a       rdfs:Class ;
+          rdfs:subClassOf cv:Model_class .
+
+    cv:Relation_class
+          a       rdfs:Class .
+
+    :followed_by
+          a       rdf:Property , cv:na_relation_property ;
+          rdfs:label "followed by" .
+
+    :CookingIngredient
+          a       rdfs:Class ;
+          rdfs:label "CookingIngredient" ;
+          rdfs:subClassOf cv:Instance_class .
+
+    cv:table_property
+          rdfs:subClassOf rdf:Property .
+
+    :APIEndpoint
+          a       rdfs:Class ;
+          rdfs:label "APIEndpoint" ;
+          rdfs:subClassOf cv:Instance_class .
+
+    :depends_on
+          a       rdf:Property , cv:na_relation_property ;
+          rdfs:label "depends on" .
+
+    cv:Instance_class
+          a       rdfs:Class .
+
+    :Position
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "Position" ;
+          cv:used_in :ProductFeature , :Database , :Hypothesis , :CookingStep , :MLModel , :CookingObject , :Infrastructure , :Experiment , :Stop , :Dataset , :CookingIngredient , :APIEndpoint , :Start , :ComplexIngredient .
+
+    :Equipment_usage
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "Equipment usage" ;
+          cv:used_in :CookingObject .
+
+    :ProductFeature
+          a       rdfs:Class ;
+          rdfs:label "ProductFeature" ;
+          rdfs:subClassOf cv:Instance_class .
+
+    :Database
+          a       rdfs:Class ;
+          rdfs:label "Database" ;
+          rdfs:subClassOf cv:Instance_class .
+
+    :powers
+          a       rdf:Property , cv:na_relation_property ;
+          rdfs:label "powers" .
+
+    :handling_properties
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "handling properties" ;
+          cv:used_in :CookingIngredient , :ComplexIngredient .
+
+    :results
+          a       cv:table_property , rdf:Property ;
+          rdfs:label "results" ;
+          cv:used_in :Experiment .
+
+    :Cooking_Recipes
+          a       rdfs:Class ;
+          rdfs:subClassOf cv:Model_class .
+
+    cv:Table_class
+          a       rdfs:Class .
+
+    :run_program_or_file
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "run program or file" ;
+          cv:used_in :CookingStep .
+
+    :requires_instruments
+          a       rdf:Property , cv:na_relation_property ;
+          rdfs:label "requires instruments" ;
+          cv:used_in :CookingStep .
+
+    :Condition
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "Condition" ;
+          cv:used_in :followed_By .
+
+    :Name
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:comment "The name of an element." ;
+          rdfs:label "Name" ;
+          rdfs:subPropertyOf rdfs:label ;
+          cv:used_in cv:everywhere .
+
+    :Cost
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "Cost" ;
+          cv:used_in :CookingStep .
+
+    :Infrastructure
+          a       rdfs:Class ;
+          rdfs:label "Infrastructure" ;
+          rdfs:subClassOf cv:Instance_class .
+
+    :deploys_to
+          a       rdf:Property , cv:na_relation_property ;
+          rdfs:label "deploys to" .
+
+    :ExperimentResults
+          a       cv:Table_class , rdfs:Class ;
+          rdfs:label "ExperimentResults" .
+
+    :Ingredient_Quantities
+          a       cv:Table_class , rdfs:Class ;
+          rdfs:label "Ingredient Quantities" .
+
+    :Preferred_picture
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "Preferred picture" ;
+          cv:used_in :CookingObject .
+
+    cv:attribute_property
+          a       rdfs:Class ;
+          rdfs:subClassOf rdf:Property .
+
+    cv:contains
+          a       rdf:Property .
+
+    :Metric_Name
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "Metric Name" ;
+          cv:used_in :ExperimentResults .
+
+    :Performance_Score
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "Performance Score" ;
+          cv:used_in :Experiment , :MLModel .
+
+    :Free_formula
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "Free formula" ;
+          cv:used_in :CookingStep .
+
+    :Value
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "Value" ;
+          cv:used_in :ExperimentResults .
+
+    :MLModel
+          a       rdfs:Class ;
+          rdfs:label "MLModel" ;
+          rdfs:subClassOf cv:Instance_class .
+
+    :tests_validates
+          a       rdf:Property , cv:na_relation_property ;
+          rdfs:label "tests validates" .
+
+    cv:used_in
+          a       rdf:Property .
+
+    :processes_data
+          a       rdf:Property , cv:na_relation_property ;
+          rdfs:label "processes data" .
+
+    :Experiment
+          a       rdfs:Class ;
+          rdfs:label "Experiment" ;
+          rdfs:subClassOf cv:Instance_class .
+
+    :Stop
+          a       rdfs:Class ;
+          rdfs:label "Stop" ;
+          rdfs:subClassOf cv:Instance_class .
+
+    :Ingredient
+          a       rdf:Property , cv:na_relation_property ;
+          rdfs:label "Ingredient" ;
+          cv:used_in :Ingredient_Quantities .
+
+    :Positions
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "Positions" ;
+          cv:used_in :followed_By .
+
+    cv:direct_transformation
+          rdfs:subPropertyOf cv:table_property .
+
+    :Status
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "Status" ;
+          cv:used_in :Experiment , :MLModel .
+
+    :Version
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:comment "The version of a model." ;
+          rdfs:label "Version" ;
+          cv:used_in cv:Model_class .
+
+    :Start
+          a       rdfs:Class ;
+          rdfs:label "Start" ;
+          rdfs:subClassOf cv:Instance_class .
+
+    :Quantity
+          a       cv:attribute_property , rdf:Property ;
+          rdfs:label "Quantity" ;
+          cv:used_in :Ingredient_Quantities .
+
+    :HlpTxt
+          rdfs:label "HlpTxt" .
+
+    :AI_Engineering_Pipeline
+          a       rdfs:Class ;
+          rdfs:subClassOf cv:Model_class .
+}
+
