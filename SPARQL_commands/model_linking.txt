@@ -1,0 +1,12 @@
+PREFIX air: <http://example.com/ai-research#>
+PREFIX aie: <http://example.com/ai-engineering#>
+
+INSERT{
+  ?experiment air:implements ?model .
+}
+WHERE {
+  ?experiment air:implementsModel ?modelIRI .
+  ?model a aie:MLModel .
+
+  FILTER(STR(?model) = STR(?modelIRI))
+}

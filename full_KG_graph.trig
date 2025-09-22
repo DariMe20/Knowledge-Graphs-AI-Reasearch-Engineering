@@ -1,0 +1,973 @@
+
+<http://buchmann.ro/fullKG> {
+  <http://buchmann.ro#Dataset> a <http://www.w3.org/2002/07/owl#Class> .
+  
+  <http://buchmann.ro/2024-06-01T10%3A00%3A00Z> a <http://example.com/ai-engineering#MonitoringRecord>;
+    <http://example.com/ai-engineering#hasCostPerHour> 2.5;
+    <http://example.com/ai-engineering#hasEnvironment> "production";
+    <http://example.com/ai-engineering#hasErrorRate> 0.001;
+    <http://example.com/ai-engineering#hasLatency> 180.0;
+    <http://example.com/ai-engineering#hasRequestRate> 150.0;
+    <http://example.com/ai-engineering#monitorsService> <http://example.com/ai-engineering#sentiment-api>;
+    <http://example.com/ai-engineering#observesModelVersion> <http://example.com/ai-engineering#v1.0> .
+  
+  <http://buchmann.ro/2024-06-01T11%3A00%3A00Z> a <http://example.com/ai-engineering#MonitoringRecord>;
+    <http://example.com/ai-engineering#hasCostPerHour> 2.75;
+    <http://example.com/ai-engineering#hasEnvironment> "production";
+    <http://example.com/ai-engineering#hasErrorRate> 0.002;
+    <http://example.com/ai-engineering#hasLatency> 190.0;
+    <http://example.com/ai-engineering#hasRequestRate> 200.0;
+    <http://example.com/ai-engineering#monitorsService> <http://example.com/ai-engineering#sentiment-api>;
+    <http://example.com/ai-engineering#observesModelVersion> <http://example.com/ai-engineering#v1.0> .
+  
+  <http://buchmann.ro/2024-06-02T09%3A00%3A00Z> a <http://example.com/ai-engineering#MonitoringRecord>;
+    <http://example.com/ai-engineering#hasCostPerHour> 2.0;
+    <http://example.com/ai-engineering#hasEnvironment> "staging";
+    <http://example.com/ai-engineering#hasErrorRate> 0.005;
+    <http://example.com/ai-engineering#hasLatency> 300.0;
+    <http://example.com/ai-engineering#hasRequestRate> 120.0;
+    <http://example.com/ai-engineering#monitorsService> <http://example.com/ai-engineering#vision-api>;
+    <http://example.com/ai-engineering#observesModelVersion> <http://example.com/ai-engineering#v0.9> .
+  
+  <http://buchmann.ro/2024-06-02T10%3A00%3A00Z> a <http://example.com/ai-engineering#MonitoringRecord>;
+    <http://example.com/ai-engineering#hasCostPerHour> 1.8;
+    <http://example.com/ai-engineering#hasEnvironment> "development";
+    <http://example.com/ai-engineering#hasErrorRate> 0.007;
+    <http://example.com/ai-engineering#hasLatency> 250.0;
+    <http://example.com/ai-engineering#hasRequestRate> 90.0;
+    <http://example.com/ai-engineering#monitorsService> <http://example.com/ai-engineering#qa-api>;
+    <http://example.com/ai-engineering#observesModelVersion> <http://example.com/ai-engineering#v0.8> .
+  
+  <http://buchmann.ro/2024-06-02T11%3A00%3A00Z> a <http://example.com/ai-engineering#MonitoringRecord>;
+    <http://example.com/ai-engineering#hasCostPerHour> 3.2;
+    <http://example.com/ai-engineering#hasEnvironment> "production";
+    <http://example.com/ai-engineering#hasErrorRate> 0.001;
+    <http://example.com/ai-engineering#hasLatency> 210.0;
+    <http://example.com/ai-engineering#hasRequestRate> 250.0;
+    <http://example.com/ai-engineering#monitorsService> <http://example.com/ai-engineering#doc-api>;
+    <http://example.com/ai-engineering#observesModelVersion> <http://example.com/ai-engineering#v2.0> .
+  
+  <http://buchmann.ro/2024-06-02T12%3A00%3A00Z> a <http://example.com/ai-engineering#MonitoringRecord>;
+    <http://example.com/ai-engineering#hasCostPerHour> 3.5;
+    <http://example.com/ai-engineering#hasEnvironment> "production";
+    <http://example.com/ai-engineering#hasErrorRate> 0.002;
+    <http://example.com/ai-engineering#hasLatency> 330.0;
+    <http://example.com/ai-engineering#hasRequestRate> 180.0;
+    <http://example.com/ai-engineering#monitorsService> <http://example.com/ai-engineering#vision-h-api>;
+    <http://example.com/ai-engineering#observesModelVersion> <http://example.com/ai-engineering#v1.2> .
+  
+  <http://example.com/ai-engineering#BERT-Large> a <http://example.com/ai-engineering#MLArchitecture> .
+  
+  <http://example.com/ai-engineering#BERT-base> a <http://example.com/ai-engineering#MLArchitecture> .
+  
+  <http://example.com/ai-engineering#CustomQA> a <http://buchmann.ro#Dataset>, <http://example.com/ai-engineering#Dataset> .
+  
+  <http://example.com/ai-engineering#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+      <http://buchmann.ro#Dataset> .
+  
+  <http://example.com/ai-engineering#ImageNet> a <http://buchmann.ro#Dataset>, <http://example.com/ai-engineering#Dataset> .
+  
+  <http://example.com/ai-engineering#MODEL001> a <http://example.com/ai-engineering#MLModel>;
+    <http://example.com/ai-engineering#hasAccuracy> "0.94";
+    <http://example.com/ai-engineering#hasArchitecture> <http://example.com/ai-engineering#BERT-base>,
+      "BERT-base";
+    <http://example.com/ai-engineering#hasDeploymentEndpoint> <http://example.com/ai-engineering#api.company.com/sentiment>;
+    <http://example.com/ai-engineering#hasInferenceTime> "150";
+    <http://example.com/ai-engineering#hasModelName> <http://example.com/ai-engineering#sentiment-bert-v1>,
+      "sentiment-bert-v1";
+    <http://example.com/ai-engineering#hasStatus> "production";
+    <http://example.com/ai-engineering#hasVersion> <http://example.com/ai-engineering#v1.0>;
+    <http://example.com/ai-engineering#trainedOn> <http://example.com/ai-engineering#custom-reviews-10k> .
+  
+  <http://example.com/ai-engineering#MODEL002> a <http://example.com/ai-engineering#MLModel>;
+    <http://example.com/ai-engineering#hasAccuracy> "0.81";
+    <http://example.com/ai-engineering#hasArchitecture> <http://example.com/ai-engineering#ViT-Base>,
+      "ViT-Base";
+    <http://example.com/ai-engineering#hasDeploymentEndpoint> <http://example.com/ai-engineering#api.company.com/vision>;
+    <http://example.com/ai-engineering#hasInferenceTime> "300";
+    <http://example.com/ai-engineering#hasModelName> <http://example.com/ai-engineering#vision-vit-base>,
+      "vision-vit-base";
+    <http://example.com/ai-engineering#hasStatus> "staging";
+    <http://example.com/ai-engineering#hasVersion> <http://example.com/ai-engineering#v0.9>;
+    <http://example.com/ai-engineering#trainedOn> <http://example.com/ai-engineering#ImageNet> .
+  
+  <http://example.com/ai-engineering#MODEL003> a <http://example.com/ai-engineering#MLModel>;
+    <http://example.com/ai-engineering#hasAccuracy> "0.74";
+    <http://example.com/ai-engineering#hasArchitecture> <http://example.com/ai-engineering#T5-Small>,
+      "T5-Small";
+    <http://example.com/ai-engineering#hasDeploymentEndpoint> <http://example.com/ai-engineering#api.company.com/qa>;
+    <http://example.com/ai-engineering#hasInferenceTime> "250";
+    <http://example.com/ai-engineering#hasModelName> <http://example.com/ai-engineering#qa-t5-small>,
+      "qa-t5-small";
+    <http://example.com/ai-engineering#hasStatus> "development";
+    <http://example.com/ai-engineering#hasVersion> <http://example.com/ai-engineering#v0.8>;
+    <http://example.com/ai-engineering#trainedOn> <http://example.com/ai-engineering#CustomQA> .
+  
+  <http://example.com/ai-engineering#MODEL004> a <http://example.com/ai-engineering#MLModel>;
+    <http://example.com/ai-engineering#hasAccuracy> "0.91";
+    <http://example.com/ai-engineering#hasArchitecture> <http://example.com/ai-engineering#BERT-Large>,
+      "BERT-Large";
+    <http://example.com/ai-engineering#hasDeploymentEndpoint> <http://example.com/ai-engineering#api.company.com/documents>;
+    <http://example.com/ai-engineering#hasInferenceTime> "200";
+    <http://example.com/ai-engineering#hasModelName> <http://example.com/ai-engineering#document-bert>,
+      "document-bert";
+    <http://example.com/ai-engineering#hasStatus> "production";
+    <http://example.com/ai-engineering#hasVersion> <http://example.com/ai-engineering#v2.0>;
+    <http://example.com/ai-engineering#trainedOn> <http://example.com/ai-engineering#SQuAD> .
+  
+  <http://example.com/ai-engineering#MODEL005> a <http://example.com/ai-engineering#MLModel>;
+    <http://example.com/ai-engineering#hasAccuracy> "0.83";
+    <http://example.com/ai-engineering#hasArchitecture> <http://example.com/ai-engineering#ViT-Huge>,
+      "ViT-Huge";
+    <http://example.com/ai-engineering#hasDeploymentEndpoint> <http://example.com/ai-engineering#api.company.com/vision-h>;
+    <http://example.com/ai-engineering#hasInferenceTime> "350";
+    <http://example.com/ai-engineering#hasModelName> <http://example.com/ai-engineering#vision-vit-huge>,
+      "vision-vit-huge";
+    <http://example.com/ai-engineering#hasStatus> "production";
+    <http://example.com/ai-engineering#hasVersion> <http://example.com/ai-engineering#v1.2>;
+    <http://example.com/ai-engineering#trainedOn> <http://example.com/ai-engineering#ImageNet> .
+  
+  <http://example.com/ai-engineering#SQuAD> a <http://buchmann.ro#Dataset>, <http://example.com/ai-engineering#Dataset> .
+  
+  <http://example.com/ai-engineering#T5-Small> a <http://example.com/ai-engineering#MLArchitecture> .
+  
+  <http://example.com/ai-engineering#ViT-Base> a <http://example.com/ai-engineering#MLArchitecture> .
+  
+  <http://example.com/ai-engineering#ViT-Huge> a <http://example.com/ai-engineering#MLArchitecture> .
+  
+  <http://example.com/ai-engineering#api.company.com/documents> a <http://example.com/ai-engineering#APIEndpoint> .
+  
+  <http://example.com/ai-engineering#api.company.com/qa> a <http://example.com/ai-engineering#APIEndpoint> .
+  
+  <http://example.com/ai-engineering#api.company.com/sentiment> a <http://example.com/ai-engineering#APIEndpoint> .
+  
+  <http://example.com/ai-engineering#api.company.com/vision> a <http://example.com/ai-engineering#APIEndpoint> .
+  
+  <http://example.com/ai-engineering#api.company.com/vision-h> a <http://example.com/ai-engineering#APIEndpoint> .
+  
+  <http://example.com/ai-engineering#custom-reviews-10k> a <http://buchmann.ro#Dataset>,
+      <http://example.com/ai-engineering#Dataset> .
+  
+  <http://example.com/ai-engineering#deploys> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-engineering#deploys> .
+  
+  <http://example.com/ai-engineering#doc-api> a <http://example.com/ai-engineering#Service> .
+  
+  <http://example.com/ai-engineering#hasAccuracy> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-engineering#hasAccuracy> .
+  
+  <http://example.com/ai-engineering#hasArchitecture> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-engineering#hasArchitecture> .
+  
+  <http://example.com/ai-engineering#hasCostPerHour> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-engineering#hasCostPerHour> .
+  
+  <http://example.com/ai-engineering#hasDeploymentEndpoint> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-engineering#hasDeploymentEndpoint> .
+  
+  <http://example.com/ai-engineering#hasEnvironment> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-engineering#hasEnvironment> .
+  
+  <http://example.com/ai-engineering#hasErrorRate> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-engineering#hasErrorRate> .
+  
+  <http://example.com/ai-engineering#hasInferenceTime> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-engineering#hasInferenceTime> .
+  
+  <http://example.com/ai-engineering#hasLatency> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-engineering#hasLatency> .
+  
+  <http://example.com/ai-engineering#hasModelName> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-engineering#hasModelName> .
+  
+  <http://example.com/ai-engineering#hasRequestRate> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-engineering#hasRequestRate> .
+  
+  <http://example.com/ai-engineering#hasStatus> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-engineering#hasStatus> .
+  
+  <http://example.com/ai-engineering#hasVersion> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-engineering#hasVersion> .
+  
+  <http://example.com/ai-engineering#monitorsService> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-engineering#monitorsService> .
+  
+  <http://example.com/ai-engineering#observesModelVersion> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-engineering#observesModelVersion> .
+  
+  <http://example.com/ai-engineering#qa-api> a <http://example.com/ai-engineering#Service> .
+  
+  <http://example.com/ai-engineering#sentiment-api> a <http://example.com/ai-engineering#Service> .
+  
+  <http://example.com/ai-engineering#trainedOn> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-engineering#trainedOn> .
+  
+  <http://example.com/ai-engineering#usedIn> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-engineering#usedIn> .
+  
+  <http://example.com/ai-engineering#vision-api> a <http://example.com/ai-engineering#Service> .
+  
+  <http://example.com/ai-engineering#vision-h-api> a <http://example.com/ai-engineering#Service> .
+  
+  <http://example.com/ai-research#BERT-Base> a <http://example.com/ai-engineering#MLModel>;
+    <http://example.com/ai-engineering#usedIn> <http://example.com/ai-research#EXP003>;
+    <http://example.com/ai-research#usedIn> <http://example.com/ai-research#EXP003> .
+  
+  <http://example.com/ai-research#BERT-Large> a <http://example.com/ai-engineering#MLModel>;
+    <http://example.com/ai-engineering#usedIn> <http://example.com/ai-research#EXP004>;
+    <http://example.com/ai-research#usedIn> <http://example.com/ai-research#EXP004> .
+  
+  <http://example.com/ai-research#CustomQA> a <http://buchmann.ro#Dataset>, <http://example.com/ai-research#Dataset> .
+  
+  <http://example.com/ai-research#Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+      <http://buchmann.ro#Dataset> .
+  
+  <http://example.com/ai-research#EXP001> a <http://example.com/ai-research#Experiment>;
+    <http://example.com/ai-research#hasAccuracy> "0.76";
+    <http://example.com/ai-research#hasDate> "1/15/2024"^^<http://www.w3.org/2001/XMLSchema#date>,
+      "2024-01-15";
+    <http://example.com/ai-research#hasF1Score> "0.74";
+    <http://example.com/ai-research#hasF1Scoring> "0.74";
+    <http://example.com/ai-research#hasResearcher> "alice@company.com";
+    <http://example.com/ai-research#hasStatus> "Completed";
+    <http://example.com/ai-research#hasTrainingTime> "24h";
+    <http://example.com/ai-research#implements> <http://example.com/ai-research#ResNet50>;
+    <http://example.com/ai-research#implementsModel> <http://example.com/ai-research#ResNet50>,
+      <http://example.com/ai-research#res-net-50>, "ResNet50";
+    <http://example.com/ai-research#testedBy> <http://example.com/ai-research#HYP001>;
+    <http://example.com/ai-research#tests> <http://example.com/ai-research#HYP001>;
+    <http://example.com/ai-research#uses> <http://example.com/ai-research#ImageNet>, "ResNet50" .
+  
+  <http://example.com/ai-research#EXP002> a <http://example.com/ai-research#Experiment>;
+    <http://example.com/ai-research#hasAccuracy> "0.81";
+    <http://example.com/ai-research#hasDate> "1/20/2024"^^<http://www.w3.org/2001/XMLSchema#date>,
+      "2024-01-20";
+    <http://example.com/ai-research#hasF1Score> "0.79";
+    <http://example.com/ai-research#hasF1Scoring> "0.79";
+    <http://example.com/ai-research#hasResearcher> "bob@company.com";
+    <http://example.com/ai-research#hasStatus> "Completed";
+    <http://example.com/ai-research#hasTrainingTime> "18h";
+    <http://example.com/ai-research#implements> <http://example.com/ai-research#ViT-Base>;
+    <http://example.com/ai-research#implementsModel> <http://example.com/ai-research#ViT-Base>,
+      <http://example.com/ai-research#vision-vit-base>, "ViT-Base";
+    <http://example.com/ai-research#testedBy> <http://example.com/ai-research#HYP001>;
+    <http://example.com/ai-research#tests> <http://example.com/ai-research#HYP001>;
+    <http://example.com/ai-research#uses> <http://example.com/ai-research#ImageNet>, "ViT-Base" .
+  
+  <http://example.com/ai-research#EXP003> a <http://example.com/ai-research#Experiment>;
+    <http://example.com/ai-research#hasAccuracy> "0.87";
+    <http://example.com/ai-research#hasDate> "2/2/2024"^^<http://www.w3.org/2001/XMLSchema#date>;
+    <http://example.com/ai-research#hasF1Score> "0.85";
+    <http://example.com/ai-research#hasResearcher> "charlie@company.com";
+    <http://example.com/ai-research#hasStatus> "Failed";
+    <http://example.com/ai-research#hasTrainingTime> "12h";
+    <http://example.com/ai-research#implements> <http://example.com/ai-research#BERT-Base>;
+    <http://example.com/ai-research#implementsModel> <http://example.com/ai-research#BERT-Base>,
+      <http://example.com/ai-research#sentiment-bert-v1>, "BERT-Base";
+    <http://example.com/ai-research#testedBy> <http://example.com/ai-research#HYP002>;
+    <http://example.com/ai-research#tests> <http://example.com/ai-research#HYP002>;
+    <http://example.com/ai-research#uses> <http://example.com/ai-research#SQuAD>, <http://example.com/ai-research#custom-reviews-10k> .
+  
+  <http://example.com/ai-research#EXP004> a <http://example.com/ai-research#Experiment>;
+    <http://example.com/ai-research#hasAccuracy> "0.91";
+    <http://example.com/ai-research#hasDate> "2/10/2024"^^<http://www.w3.org/2001/XMLSchema#date>;
+    <http://example.com/ai-research#hasF1Score> "0.88";
+    <http://example.com/ai-research#hasResearcher> "dana@company.com";
+    <http://example.com/ai-research#hasStatus> "Completed";
+    <http://example.com/ai-research#hasTrainingTime> "14h";
+    <http://example.com/ai-research#implements> <http://example.com/ai-research#BERT-Large>;
+    <http://example.com/ai-research#implementsModel> <http://example.com/ai-research#BERT-Large>,
+      <http://example.com/ai-research#document-bert>, "BERT-Large";
+    <http://example.com/ai-research#testedBy> <http://example.com/ai-research#HYP002>;
+    <http://example.com/ai-research#tests> <http://example.com/ai-research#HYP002>;
+    <http://example.com/ai-research#uses> <http://example.com/ai-research#SQuAD> .
+  
+  <http://example.com/ai-research#EXP005> a <http://example.com/ai-research#Experiment>;
+    <http://example.com/ai-research#hasAccuracy> "0.74";
+    <http://example.com/ai-research#hasDate> "3/5/2024"^^<http://www.w3.org/2001/XMLSchema#date>;
+    <http://example.com/ai-research#hasF1Score> "0.7";
+    <http://example.com/ai-research#hasResearcher> "bob@company.com";
+    <http://example.com/ai-research#hasStatus> "Failed";
+    <http://example.com/ai-research#hasTrainingTime> "10h";
+    <http://example.com/ai-research#implements> <http://example.com/ai-research#T5-Small>;
+    <http://example.com/ai-research#implementsModel> <http://example.com/ai-research#T5-Small>,
+      <http://example.com/ai-research#qa-t5-small>, "T5-Small";
+    <http://example.com/ai-research#testedBy> <http://example.com/ai-research#HYP003>;
+    <http://example.com/ai-research#tests> <http://example.com/ai-research#HYP003>;
+    <http://example.com/ai-research#uses> <http://example.com/ai-research#CustomQA> .
+  
+  <http://example.com/ai-research#EXP006> a <http://example.com/ai-research#Experiment>;
+    <http://example.com/ai-research#hasAccuracy> "0.83";
+    <http://example.com/ai-research#hasDate> "3/20/2024"^^<http://www.w3.org/2001/XMLSchema#date>;
+    <http://example.com/ai-research#hasF1Score> "0.81";
+    <http://example.com/ai-research#hasResearcher> "alice@company.com";
+    <http://example.com/ai-research#hasStatus> "Completed";
+    <http://example.com/ai-research#hasTrainingTime> "30h";
+    <http://example.com/ai-research#implements> <http://example.com/ai-research#ViT-Huge>;
+    <http://example.com/ai-research#implementsModel> <http://example.com/ai-research#ViT-Huge>,
+      <http://example.com/ai-research#vision-vit-huge>, "ViT-Huge";
+    <http://example.com/ai-research#testedBy> <http://example.com/ai-research#HYP004>;
+    <http://example.com/ai-research#tests> <http://example.com/ai-research#HYP004>;
+    <http://example.com/ai-research#uses> <http://example.com/ai-research#ImageNet> .
+  
+  <http://example.com/ai-research#HYP001> a <http://example.com/ai-research#Hypotesis> .
+  
+  <http://example.com/ai-research#HYP002> a <http://example.com/ai-research#Hypotesis> .
+  
+  <http://example.com/ai-research#HYP003> a <http://example.com/ai-research#Hypotesis> .
+  
+  <http://example.com/ai-research#HYP004> a <http://example.com/ai-research#Hypotesis> .
+  
+  <http://example.com/ai-research#ImageNet> a <http://buchmann.ro#Dataset>, <http://example.com/ai-research#Dataset> .
+  
+  <http://example.com/ai-research#ResNet50> a <http://example.com/ai-engineering#MLModel>;
+    <http://example.com/ai-engineering#usedIn> <http://example.com/ai-research#EXP001>;
+    <http://example.com/ai-research#usedIn> <http://example.com/ai-research#EXP001> .
+  
+  <http://example.com/ai-research#SQuAD> a <http://buchmann.ro#Dataset>, <http://example.com/ai-research#Dataset> .
+  
+  <http://example.com/ai-research#T5-Small> a <http://example.com/ai-engineering#MLModel>;
+    <http://example.com/ai-engineering#usedIn> <http://example.com/ai-research#EXP005>;
+    <http://example.com/ai-research#usedIn> <http://example.com/ai-research#EXP005> .
+  
+  <http://example.com/ai-research#ViT-Base> a <http://example.com/ai-engineering#MLModel>;
+    <http://example.com/ai-engineering#usedIn> <http://example.com/ai-research#EXP002>;
+    <http://example.com/ai-research#usedIn> <http://example.com/ai-research#EXP002> .
+  
+  <http://example.com/ai-research#ViT-Huge> a <http://example.com/ai-engineering#MLModel>;
+    <http://example.com/ai-engineering#usedIn> <http://example.com/ai-research#EXP006>;
+    <http://example.com/ai-research#usedIn> <http://example.com/ai-research#EXP006> .
+  
+  <http://example.com/ai-research#document-bert> <http://example.com/ai-engineering#usedIn>
+      <http://example.com/ai-research#EXP004>;
+    <http://example.com/ai-research#usedIn> <http://example.com/ai-research#EXP004> .
+  
+  <http://example.com/ai-research#hasAccuracy> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-research#hasAccuracy> .
+  
+  <http://example.com/ai-research#hasDate> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-research#hasDate> .
+  
+  <http://example.com/ai-research#hasF1Score> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-research#hasF1Score> .
+  
+  <http://example.com/ai-research#hasF1Scoring> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-research#hasF1Scoring> .
+  
+  <http://example.com/ai-research#hasResearcher> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-research#hasResearcher> .
+  
+  <http://example.com/ai-research#hasStatus> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-research#hasStatus> .
+  
+  <http://example.com/ai-research#hasTrainingTime> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-research#hasTrainingTime> .
+  
+  <http://example.com/ai-research#implements> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-research#implements> .
+  
+  <http://example.com/ai-research#implementsModel> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-research#implementsModel> .
+  
+  <http://example.com/ai-research#qa-t5-small> <http://example.com/ai-engineering#usedIn>
+      <http://example.com/ai-research#EXP005>;
+    <http://example.com/ai-research#usedIn> <http://example.com/ai-research#EXP005> .
+  
+  <http://example.com/ai-research#res-net-50> <http://example.com/ai-engineering#usedIn>
+      <http://example.com/ai-research#EXP001>;
+    <http://example.com/ai-research#usedIn> <http://example.com/ai-research#EXP001> .
+  
+  <http://example.com/ai-research#sentiment-bert-v1> <http://example.com/ai-engineering#usedIn>
+      <http://example.com/ai-research#EXP003>;
+    <http://example.com/ai-research#usedIn> <http://example.com/ai-research#EXP003> .
+  
+  <http://example.com/ai-research#testedBy> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-research#testedBy> .
+  
+  <http://example.com/ai-research#tests> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-research#tests> .
+  
+  <http://example.com/ai-research#usedIn> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-research#usedIn> .
+  
+  <http://example.com/ai-research#uses> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.com/ai-research#uses> .
+  
+  <http://example.com/ai-research#vision-vit-base> <http://example.com/ai-engineering#usedIn>
+      <http://example.com/ai-research#EXP002>;
+    <http://example.com/ai-research#usedIn> <http://example.com/ai-research#EXP002> .
+  
+  <http://example.com/ai-research#vision-vit-huge> <http://example.com/ai-engineering#usedIn>
+      <http://example.com/ai-research#EXP006>;
+    <http://example.com/ai-research#usedIn> <http://example.com/ai-research#EXP006> .
+  
+  <http://example.org#AI_Engineering_Pipeline> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#AI_Engineering_Pipeline>,
+      <http://www.comvantage.eu/mm#Model_class> .
+  
+  <http://example.org#AI_Engineering_Pipeline-AI_Engineering_Pipeline_-_new_> a <http://example.org#AI_Engineering_Pipeline>,
+      <http://www.comvantage.eu/mm#Model_class>;
+    <http://example.org#Name> "AI Engineering Pipeline - new";
+    <http://example.org#Type> "AI Engineering Pipeline";
+    <http://example.org#Version> "";
+    <http://example.org#object-id> "EXPR val:17946";
+    <http://www.w3.org/2000/01/rdf-schema#label> "AI Engineering Pipeline - new" .
+  
+  <http://example.org#AI_Research_Processes> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#AI_Research_Processes>,
+      <http://www.comvantage.eu/mm#Model_class> .
+  
+  <http://example.org#AI_Research_Processes-AI_Research_Processes_-_new_> a <http://example.org#AI_Research_Processes>,
+      <http://www.comvantage.eu/mm#Model_class>;
+    <http://example.org#Name> "AI Research Processes - new";
+    <http://example.org#Type> "AI Research Processes";
+    <http://example.org#Version> "";
+    <http://example.org#object-id> "EXPR val:17943";
+    <http://www.w3.org/2000/01/rdf-schema#label> "AI Research Processes - new" .
+  
+  <http://example.org#APIEndpoint> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "APIEndpoint";
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#APIEndpoint>,
+      <http://www.comvantage.eu/mm#Instance_class> .
+  
+  <http://example.org#APIEndpoint-17983-vision-api> a <http://example.org#APIEndpoint>,
+      <http://www.comvantage.eu/mm#Instance_class>;
+    <http://example.org#Name> "vision-api";
+    <http://example.org#Position> "NODE x:4cm y:13.25cm index:3";
+    <http://example.org#depends_on> <http://example.org#Infrastructure-17986-K8s_Cluster>;
+    <http://example.org#object-id> "EXPR val:17983";
+    <http://example.org#powers> <http://example.org#ProductFeature-17992-Auto_Image_Tagging>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "vision-api" .
+  
+  <http://example.org#Calculated> a <http://www.comvantage.eu/mm#attribute_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#CookingStep>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Calculated" .
+  
+  <http://example.org#ComplexIngredient> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Help not available.";
+    <http://www.w3.org/2000/01/rdf-schema#label> "ComplexIngredient";
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#ComplexIngredient>,
+      <http://www.comvantage.eu/mm#Instance_class> .
+  
+  <http://example.org#Condition> a <http://www.comvantage.eu/mm#attribute_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#followed_By>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Condition" .
+  
+  <http://example.org#CookingIngredient> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "CookingIngredient";
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#CookingIngredient>,
+      <http://www.comvantage.eu/mm#Instance_class> .
+  
+  <http://example.org#CookingObject> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "CookingObject";
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#CookingObject>,
+      <http://www.comvantage.eu/mm#Instance_class> .
+  
+  <http://example.org#CookingStep> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "CookingStep";
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#CookingStep>,
+      <http://www.comvantage.eu/mm#Instance_class> .
+  
+  <http://example.org#Cooking_Recipes> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#Cooking_Recipes>,
+      <http://www.comvantage.eu/mm#Model_class> .
+  
+  <http://example.org#Cooking_Resources> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#Cooking_Resources>,
+      <http://www.comvantage.eu/mm#Model_class> .
+  
+  <http://example.org#Cost> a <http://www.comvantage.eu/mm#attribute_property>, <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#CookingStep>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Cost" .
+  
+  <http://example.org#Database> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Database";
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#Database>, <http://www.comvantage.eu/mm#Instance_class> .
+  
+  <http://example.org#Database-17976-Proprietary_data> a <http://example.org#Database>,
+      <http://www.comvantage.eu/mm#Instance_class>;
+    <http://example.org#Name> "Proprietary data";
+    <http://example.org#Position> "NODE x:3.75cm y:2.5cm index:1";
+    <http://example.org#object-id> "EXPR val:17976";
+    <http://example.org#processes_data> <http://example.org#MLModel-17979-ViT-Base_v1_2>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Proprietary data" .
+  
+  <http://example.org#Dataset> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Dataset";
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#Dataset>, <http://www.comvantage.eu/mm#Instance_class> .
+  
+  <http://example.org#Dataset-17970-Dataset-17970> a <http://example.org#Dataset>, <http://www.comvantage.eu/mm#Instance_class>;
+    <http://example.org#Name> "Dataset-17970";
+    <http://example.org#Position> "NODE x:11.25cm y:13.75cm index:6";
+    <http://example.org#object-id> "EXPR val:17970";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Dataset-17970" .
+  
+  <http://example.org#Date> a <http://www.comvantage.eu/mm#attribute_property>, <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#ExperimentResults>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Date" .
+  
+  <http://example.org#Equipment_usage> a <http://www.comvantage.eu/mm#attribute_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#CookingObject>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Equipment usage" .
+  
+  <http://example.org#Experiment> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Experiment";
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#Experiment>,
+      <http://www.comvantage.eu/mm#Instance_class> .
+  
+  <http://example.org#Experiment-17967-ImageNet_Classification> a <http://example.org#Experiment>,
+      <http://www.comvantage.eu/mm#Instance_class>;
+    <http://example.org#Name> "ImageNet Classification";
+    <http://example.org#Owner> "Davide";
+    <http://example.org#Performance_Score> "89";
+    <http://example.org#Position> "NODE x:3.25cm y:13.75cm index:5";
+    <http://example.org#Status> "Active";
+    <http://example.org#implements_in_model> <http://example.org#MLModel-17979-ViT-Base_v1_2>;
+    <http://example.org#object-id> "EXPR val:17967";
+    <http://example.org#uses_dataset> <http://example.org#Dataset-17970-Dataset-17970>;
+    <http://www.comvantage.eu/mm#described_in> <http://example.org#AI_Research_Processes-AI_Research_Processes_-_new_>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "ImageNet Classification" .
+  
+  <http://example.org#ExperimentResults> a <http://www.comvantage.eu/mm#Table_class>,
+      <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "ExperimentResults";
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#ExperimentResults> .
+  
+  <http://example.org#Free_formula> a <http://www.comvantage.eu/mm#attribute_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#CookingStep>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Free formula" .
+  
+  <http://example.org#HlpTxt> <http://www.w3.org/2000/01/rdf-schema#label> "HlpTxt" .
+  
+  <http://example.org#Hypothesis> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Hypothesis";
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#Hypothesis>,
+      <http://www.comvantage.eu/mm#Instance_class> .
+  
+  <http://example.org#Hypothesis-17963-Vision_Transformers_outperform_CNNs> a <http://example.org#Hypothesis>,
+      <http://www.comvantage.eu/mm#Instance_class>;
+    <http://example.org#Name> "Vision Transformers outperform CNNs";
+    <http://example.org#Position> "NODE x:3.25cm y:8cm index:3";
+    <http://example.org#object-id> "EXPR val:17963";
+    <http://example.org#tests_validates> <http://example.org#Experiment-17967-ImageNet_Classification>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Vision Transformers outperform CNNs" .
+  
+  <http://example.org#Infrastructure> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Infrastructure";
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#Infrastructure>,
+      <http://www.comvantage.eu/mm#Instance_class> .
+  
+  <http://example.org#Infrastructure-17986-K8s_Cluster> a <http://example.org#Infrastructure>,
+      <http://www.comvantage.eu/mm#Instance_class>;
+    <http://example.org#Name> "K8s Cluster";
+    <http://example.org#Position> "NODE x:12cm y:13cm index:4";
+    <http://example.org#object-id> "EXPR val:17986";
+    <http://www.w3.org/2000/01/rdf-schema#label> "K8s Cluster" .
+  
+  <http://example.org#Ingredient> a <http://www.comvantage.eu/mm#na_relation_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#Ingredient_Quantities>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Ingredient" .
+  
+  <http://example.org#Ingredient_Quantities> a <http://www.comvantage.eu/mm#Table_class>,
+      <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Ingredient Quantities";
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#Ingredient_Quantities> .
+  
+  <http://example.org#MLModel> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "MLModel";
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#MLModel>, <http://www.comvantage.eu/mm#Instance_class> .
+  
+  <http://example.org#MLModel-17979-ViT-Base_v1_2> a <http://example.org#MLModel>, <http://www.comvantage.eu/mm#Instance_class>;
+    <http://example.org#Name> "ViT-Base v1.2";
+    <http://example.org#Owner> "Daria";
+    <http://example.org#Performance_Score> "85";
+    <http://example.org#Position> "NODE x:3.75cm y:7.5cm index:2";
+    <http://example.org#Status> "Active";
+    <http://example.org#deploys_to> <http://example.org#APIEndpoint-17983-vision-api>;
+    <http://example.org#object-id> "EXPR val:17979";
+    <http://www.comvantage.eu/mm#described_in> <http://example.org#AI_Engineering_Pipeline-AI_Engineering_Pipeline_-_new_>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "ViT-Base v1.2" .
+  
+  <http://example.org#Metric_Name> a <http://www.comvantage.eu/mm#attribute_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#ExperimentResults>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Metric Name" .
+  
+  <http://example.org#Name> a <http://www.comvantage.eu/mm#attribute_property>, <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://www.comvantage.eu/mm#everywhere>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "The name of an element.";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Name";
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org#Name>, <http://www.w3.org/2000/01/rdf-schema#label> .
+  
+  <http://example.org#Owner> a <http://www.comvantage.eu/mm#attribute_property>, <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#Experiment>, <http://example.org#MLModel>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Owner";
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org#Owner> .
+  
+  <http://example.org#Performance_Score> a <http://www.comvantage.eu/mm#attribute_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#Experiment>, <http://example.org#MLModel>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Performance Score";
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org#Performance_Score> .
+  
+  <http://example.org#Position> a <http://www.comvantage.eu/mm#attribute_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#APIEndpoint>, <http://example.org#ComplexIngredient>,
+      <http://example.org#CookingIngredient>, <http://example.org#CookingObject>, <http://example.org#CookingStep>,
+      <http://example.org#Database>, <http://example.org#Dataset>, <http://example.org#Experiment>,
+      <http://example.org#Hypothesis>, <http://example.org#Infrastructure>, <http://example.org#MLModel>,
+      <http://example.org#ProductFeature>, <http://example.org#Start>, <http://example.org#Stop>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Position";
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org#Position> .
+  
+  <http://example.org#Positions> a <http://www.comvantage.eu/mm#attribute_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#followed_By>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Positions" .
+  
+  <http://example.org#Preferred_picture> a <http://www.comvantage.eu/mm#attribute_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#CookingObject>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Preferred picture" .
+  
+  <http://example.org#ProductFeature> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "ProductFeature";
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#ProductFeature>,
+      <http://www.comvantage.eu/mm#Instance_class> .
+  
+  <http://example.org#ProductFeature-17992-Auto_Image_Tagging> a <http://example.org#ProductFeature>,
+      <http://www.comvantage.eu/mm#Instance_class>;
+    <http://example.org#Name> "Auto Image Tagging";
+    <http://example.org#Position> "NODE x:4cm y:19.25cm index:5";
+    <http://example.org#object-id> "EXPR val:17992";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Auto Image Tagging" .
+  
+  <http://example.org#Quantity> a <http://www.comvantage.eu/mm#attribute_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#Ingredient_Quantities>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Quantity" .
+  
+  <http://example.org#Start> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Start";
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#Start>, <http://www.comvantage.eu/mm#Instance_class> .
+  
+  <http://example.org#Status> a <http://www.comvantage.eu/mm#attribute_property>, <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#Experiment>, <http://example.org#MLModel>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Status";
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org#Status> .
+  
+  <http://example.org#Stop> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Stop";
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#Stop>, <http://www.comvantage.eu/mm#Instance_class> .
+  
+  <http://example.org#Type> a <http://www.comvantage.eu/mm#attribute_property>, <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#CookingObject>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Type";
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org#Type> .
+  
+  <http://example.org#Value> a <http://www.comvantage.eu/mm#attribute_property>, <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#ExperimentResults>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Value" .
+  
+  <http://example.org#Version> a <http://www.comvantage.eu/mm#attribute_property>, <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://www.comvantage.eu/mm#Model_class>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "The version of a model.";
+    <http://www.w3.org/2000/01/rdf-schema#label> "Version";
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org#Version> .
+  
+  <http://example.org#always_requires> a <http://www.comvantage.eu/mm#na_relation_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "always requires" .
+  
+  <http://example.org#appropriate_for> a <http://www.comvantage.eu/mm#attribute_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#Cooking_Recipes>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "appropriate for" .
+  
+  <http://example.org#contributor_list> a <http://www.comvantage.eu/mm#attribute_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#Cooking_Recipes>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "contributor list" .
+  
+  <http://example.org#depends_on> a <http://www.comvantage.eu/mm#na_relation_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "depends on";
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org#depends_on> .
+  
+  <http://example.org#deploys_to> a <http://www.comvantage.eu/mm#na_relation_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "deploys to";
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org#deploys_to> .
+  
+  <http://example.org#followed_By> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "followed By";
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://example.org#followed_By>,
+      <http://www.comvantage.eu/mm#Relation_class> .
+  
+  <http://example.org#followed_by> a <http://www.comvantage.eu/mm#na_relation_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "followed by" .
+  
+  <http://example.org#handling_properties> a <http://www.comvantage.eu/mm#attribute_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#ComplexIngredient>, <http://example.org#CookingIngredient>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "handling properties" .
+  
+  <http://example.org#implements_in_model> a <http://www.comvantage.eu/mm#na_relation_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#Experiment>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "implements in model";
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org#implements_in_model> .
+  
+  <http://example.org#integrates_with> a <http://www.comvantage.eu/mm#na_relation_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "integrates with" .
+  
+  <http://example.org#object-id> a <http://www.comvantage.eu/mm#attribute_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#APIEndpoint>, <http://example.org#ComplexIngredient>,
+      <http://example.org#CookingIngredient>, <http://example.org#CookingObject>, <http://example.org#CookingStep>,
+      <http://example.org#Database>, <http://example.org#Dataset>, <http://example.org#Experiment>,
+      <http://example.org#Hypothesis>, <http://example.org#Infrastructure>, <http://example.org#MLModel>,
+      <http://example.org#ProductFeature>, <http://example.org#Start>, <http://example.org#Stop>;
+    <http://www.w3.org/2000/01/rdf-schema#comment> """APIEndpoint: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""",
+      """ComplexIngredient: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""",
+      """CookingIngredient: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""",
+      """CookingObject: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""",
+      """CookingStep: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""",
+      """Database: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""",
+      """Dataset: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""",
+      """Experiment: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""",
+      """Hypothesis: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""",
+      """Infrastructure: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""",
+      """MLModel: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""",
+      """ProductFeature: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""",
+      """Start: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""",
+      """Stop: This attribute provides the internal ID of the object. Useful to put in the Notebook for debugging.
+
+AVOID using this attribute in functionalities! The object's ID should either already be known or be determined using other means instead, e.g. through CC \"Core\" GET_OBJ_ID.""";
+    <http://www.w3.org/2000/01/rdf-schema#label> "object-id";
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org#object-id> .
+  
+  <http://example.org#powers> a <http://www.comvantage.eu/mm#na_relation_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "powers";
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org#powers> .
+  
+  <http://example.org#processes_data> a <http://www.comvantage.eu/mm#na_relation_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "processes data";
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org#processes_data> .
+  
+  <http://example.org#requires_ingredient_quantities> a <http://www.comvantage.eu/mm#table_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#CookingStep>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "requires ingredient quantities" .
+  
+  <http://example.org#requires_ingredients> a <http://www.comvantage.eu/mm#na_relation_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#CookingStep>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "requires ingredients" .
+  
+  <http://example.org#requires_instruments> a <http://www.comvantage.eu/mm#na_relation_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#CookingStep>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "requires instruments" .
+  
+  <http://example.org#results> a <http://www.comvantage.eu/mm#table_property>, <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#Experiment>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "results" .
+  
+  <http://example.org#run_program_or_file> a <http://www.comvantage.eu/mm#attribute_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.comvantage.eu/mm#used_in> <http://example.org#CookingStep>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "run program or file" .
+  
+  <http://example.org#tests_validates> a <http://www.comvantage.eu/mm#na_relation_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "tests validates";
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org#tests_validates> .
+  
+  <http://example.org#uses_dataset> a <http://www.comvantage.eu/mm#na_relation_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#label> "uses dataset";
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://example.org#uses_dataset> .
+  
+  <http://proton.semanticweb.org/protonsys#transitiveOver> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://proton.semanticweb.org/protonsys#transitiveOver> .
+  
+  <http://www.comvantage.eu/mm#Instance_class> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.comvantage.eu/mm#Instance_class> .
+  
+  <http://www.comvantage.eu/mm#Model_class> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.comvantage.eu/mm#Model_class> .
+  
+  <http://www.comvantage.eu/mm#Relation_class> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.comvantage.eu/mm#Relation_class> .
+  
+  <http://www.comvantage.eu/mm#Table_class> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.comvantage.eu/mm#Table_class> .
+  
+  <http://www.comvantage.eu/mm#attribute_property> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.comvantage.eu/mm#attribute_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+  
+  <http://www.comvantage.eu/mm#contains> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+  
+  <http://www.comvantage.eu/mm#described_in> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.comvantage.eu/mm#described_in> .
+  
+  <http://www.comvantage.eu/mm#direct_transformation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+      <http://www.comvantage.eu/mm#table_property> .
+  
+  <http://www.comvantage.eu/mm#from_instance> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+  
+  <http://www.comvantage.eu/mm#na_relation_property> a <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.comvantage.eu/mm#na_relation_property>,
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+  
+  <http://www.comvantage.eu/mm#table_property> <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+  
+  <http://www.comvantage.eu/mm#to_instance> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+  
+  <http://www.comvantage.eu/mm#used_in> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.comvantage.eu/mm#used_in> .
+  
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Alt> <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+      <http://www.w3.org/2000/01/rdf-schema#Container> .
+  
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag> <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+      <http://www.w3.org/2000/01/rdf-schema#Container> .
+  
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq> <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+      <http://www.w3.org/2000/01/rdf-schema#Container> .
+  
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> a <http://www.w3.org/2000/01/rdf-schema#Class>,
+      <http://www.w3.org/2000/01/rdf-schema#Datatype>;
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral>,
+      <http://www.w3.org/2000/01/rdf-schema#Literal> .
+  
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>,
+      <http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty> .
+  
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+  
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+  
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#object> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+  
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+  
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List>;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+  
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+  
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://proton.semanticweb.org/protonsys#transitiveOver> <http://www.w3.org/2000/01/rdf-schema#subClassOf>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> .
+  
+  <http://www.w3.org/1999/02/22-rdf-syntax-ns#value> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+  
+  <http://www.w3.org/2000/01/rdf-schema#ContainerMembershipProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+      <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+  
+  <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://www.w3.org/2000/01/rdf-schema#subClassOf>
+      <http://www.w3.org/2000/01/rdf-schema#Class> .
+  
+  <http://www.w3.org/2000/01/rdf-schema#comment> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#comment> .
+  
+  <http://www.w3.org/2000/01/rdf-schema#domain> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#domain> .
+  
+  <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>
+      <http://www.w3.org/2000/01/rdf-schema#seeAlso> .
+  
+  <http://www.w3.org/2000/01/rdf-schema#label> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> .
+  
+  <http://www.w3.org/2000/01/rdf-schema#range> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#range> .
+  
+  <http://www.w3.org/2000/01/rdf-schema#subClassOf> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>,
+      <http://www.w3.org/2002/07/owl#TransitiveProperty>;
+    <http://proton.semanticweb.org/protonsys#transitiveOver> <http://www.w3.org/2000/01/rdf-schema#subClassOf>;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Class>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#subClassOf> .
+  
+  <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>,
+      <http://www.w3.org/2002/07/owl#TransitiveProperty>;
+    <http://proton.semanticweb.org/protonsys#transitiveOver> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> .
+  
+  <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> a <http://www.w3.org/2000/01/rdf-schema#Class>,
+      <http://www.w3.org/2000/01/rdf-schema#Datatype>;
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+  
+  <http://www.w3.org/2001/XMLSchema#string> a <http://www.w3.org/2000/01/rdf-schema#Class>,
+      <http://www.w3.org/2000/01/rdf-schema#Datatype>;
+    <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2001/XMLSchema#string> .
+  
+  <http://www.w3.org/2002/07/owl#differentFrom> a <http://www.w3.org/2002/07/owl#SymmetricProperty>;
+    <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/2002/07/owl#differentFrom> .
+  
+  <http://www.w3.org/2002/07/owl#equivalentClass> a <http://www.w3.org/2002/07/owl#SymmetricProperty>,
+      <http://www.w3.org/2002/07/owl#TransitiveProperty>;
+    <http://proton.semanticweb.org/protonsys#transitiveOver> <http://www.w3.org/2002/07/owl#equivalentClass>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#subClassOf>;
+    <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/2002/07/owl#equivalentClass> .
+  
+  <http://www.w3.org/2002/07/owl#equivalentProperty> a <http://www.w3.org/2002/07/owl#SymmetricProperty>,
+      <http://www.w3.org/2002/07/owl#TransitiveProperty>;
+    <http://proton.semanticweb.org/protonsys#transitiveOver> <http://www.w3.org/2002/07/owl#equivalentProperty>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf>;
+    <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/2002/07/owl#equivalentProperty> .
+  
+  <http://www.w3.org/2002/07/owl#inverseOf> a <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property>,
+      <http://www.w3.org/2002/07/owl#SymmetricProperty>;
+    <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#inverseOf>;
+    <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/2002/07/owl#inverseOf> .
+}

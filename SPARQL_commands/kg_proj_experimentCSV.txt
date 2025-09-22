@@ -1,0 +1,38 @@
+BASE <http://buchmann.ro#>
+PREFIX mapper: <http://www.ontotext.com/mapper/>
+PREFIX air: <http://example.com/ai-research#>
+PREFIX aie: <http://example.com/ai-engineering#>
+PREFIX : <http://buchmann.ro#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+INSERT {
+    ?s1 a air:Experiment ;
+        air:tests ?o_tests ;
+        air:uses ?o_uses ;
+        air:implementsModel ?o_implementsModel ;
+        air:hasAccuracy ?o_hasAccuracy ;
+        air:hasF1Score ?o_hasF1Score ;
+        air:hasTrainingTime ?o_hasTrainingTime ;
+        air:hasResearcher ?o_hasResearcher ;
+        air:hasDate ?o_hasDate ;
+        air:hasStatus ?o_hasStatus .
+} WHERE {
+    SERVICE <http://localhost:7333/repositories/ontorefine:2145426840381>  {
+        # Columns as variables:
+        #   ?c_experiment_id, ?c_hypothesis_id, ?c_model_name, ?c_dataset, ?c_accuracy,
+        #   ?c_f1_score, ?c_training_time, ?c_researcher, ?c_date, ?c_status
+        # Metadata as variables:
+        #   ?row_index, ?record_id
+        BIND(IRI(mapper:encode_iri(air:, ?c_experiment_id)) as ?s1)
+        BIND(IRI(mapper:encode_iri(air:, ?c_hypothesis_id)) as ?o_tests)
+        BIND(IRI(mapper:encode_iri(air:, ?c_dataset)) as ?o_uses)
+        BIND(IRI(mapper:encode_iri(air:, ?c_model_name)) as ?o_implementsModel)
+        BIND(STR(?c_accuracy) as ?o_hasAccuracy)
+        BIND(STR(?c_f1_score) as ?o_hasF1Score)
+        BIND(STR(?c_training_time) as ?o_hasTrainingTime)
+        BIND(STR(?c_researcher) as ?o_hasResearcher)
+        BIND(STRDT(?c_date, xsd:date) as ?o_hasDate)
+        BIND(STR(?c_status) as ?o_hasStatus)
+    }
+}

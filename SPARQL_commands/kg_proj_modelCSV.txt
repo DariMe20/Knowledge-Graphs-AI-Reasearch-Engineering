@@ -1,0 +1,41 @@
+BASE <http://buchmann.ro#>
+PREFIX mapper: <http://www.ontotext.com/mapper/>
+PREFIX aie: <http://example.com/ai-engineering#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX : <http://buchmann.ro#>
+
+INSERT{
+    ?s1 a aie:MLModel ;
+        aie:hasModelName ?o_hasModelName ;
+        aie:hasArchitecture ?o_hasArchitecture ;
+        aie:trainedOn ?o_trainedOn ;
+        aie:hasAccuracy ?o_hasAccuracy ;
+        aie:hasInferenceTime ?o_hasInferenceTime ;
+        aie:hasStatus ?o_hasStatus ;
+        aie:hasDeploymentEndpoint ?o_hasDeploymentEndpoint ;
+        aie:hasVersion ?o_hasVersion .
+    ?s2 a aie:MLArchitecture .
+    ?s3 a aie:Dataset .
+    ?s4 a aie:APIEndpoint .
+} WHERE {
+    SERVICE <http://localhost:7333/repositories/ontorefine:2519646781871>  {
+        # Columns as variables:
+        #   ?c_model_id, ?c_name, ?c_architecture, ?c_training_dataset, ?c_accuracy,
+        #   ?c_inference_time_ms, ?c_status, ?c_version, ?c_deployment_endpoint
+        # Metadata as variables:
+        #   ?row_index, ?record_id
+        BIND(IRI(mapper:encode_iri(aie:, ?c_model_id)) as ?s1)
+        BIND(STR(?c_name) as ?o_hasModelName)
+        BIND(IRI(mapper:encode_iri(aie:, ?c_architecture)) as ?o_hasArchitecture)
+        BIND(IRI(mapper:encode_iri(aie:, ?c_training_dataset)) as ?o_trainedOn)
+        BIND(STR(?c_accuracy) as ?o_hasAccuracy)
+        BIND(STR(?c_inference_time_ms) as ?o_hasInferenceTime)
+        BIND(STR(?c_status) as ?o_hasStatus)
+        BIND(IRI(mapper:encode_iri(aie:, ?c_deployment_endpoint)) as ?o_hasDeploymentEndpoint)
+        BIND(IRI(mapper:encode_iri(aie:, ?c_version)) as ?o_hasVersion)
+        BIND(IRI(mapper:encode_iri(aie:, ?c_architecture)) as ?s2)
+        BIND(IRI(mapper:encode_iri(aie:, ?c_training_dataset)) as ?s3)
+        BIND(IRI(mapper:encode_iri(aie:, ?c_deployment_endpoint)) as ?s4)
+    }
+}

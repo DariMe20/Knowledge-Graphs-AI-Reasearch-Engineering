@@ -1,0 +1,35 @@
+BASE <http://buchmann.ro#>
+PREFIX mapper: <http://www.ontotext.com/mapper/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX aie: <http://example.com/ai-engineering#>
+PREFIX : <http://buchmann.ro#>
+
+INSERT {
+    ?s1 a aie:MonitoringRecord ;
+        aie:monitorsService ?o_monitorsService ;
+        aie:observesModelVersion ?o_observesModelVersion ;
+        aie:hasRequestRate ?o_hasRequestRate ;
+        aie:hasLatency ?o_hasLatency ;
+        aie:hasErrorRate ?o_hasErrorRate ;
+        aie:hasCostPerHour ?o_hasCostPerHour ;
+        aie:hasEnvironment ?o_hasEnvironment .
+    ?s2 a aie:Service .
+} WHERE {
+    SERVICE <http://localhost:7333/repositories/ontorefine:2354257597269>  {
+        # Columns as variables:
+        #   ?c_timestamp, ?c_service_name, ?c_model_version, ?c_requests_per_second,
+        #   ?c_avg_latency_ms, ?c_error_rate, ?c_cost_per_hour, ?c_environment
+        # Metadata as variables:
+        #   ?row_index, ?record_id
+        BIND(IRI(mapper:encode_iri(?c_timestamp)) as ?s1)
+        BIND(IRI(mapper:encode_iri(aie:, ?c_service_name)) as ?o_monitorsService)
+        BIND(IRI(mapper:encode_iri(aie:, ?c_model_version)) as ?o_observesModelVersion)
+        BIND(STRDT(?c_requests_per_second, xsd:decimal) as ?o_hasRequestRate)
+        BIND(STRDT(?c_avg_latency_ms, xsd:decimal) as ?o_hasLatency)
+        BIND(STRDT(?c_error_rate, xsd:decimal) as ?o_hasErrorRate)
+        BIND(STRDT(?c_cost_per_hour, xsd:decimal) as ?o_hasCostPerHour)
+        BIND(STR(?c_environment) as ?o_hasEnvironment)
+        BIND(IRI(mapper:encode_iri(aie:, ?c_service_name)) as ?s2)
+    }
+}

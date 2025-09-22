@@ -1,0 +1,8 @@
+INSERT {
+  GRAPH <http://buchmann.ro/fullKG> {
+    ?s ?p ?o .
+  }
+}
+WHERE {
+  ?s ?p ?o .
+}
