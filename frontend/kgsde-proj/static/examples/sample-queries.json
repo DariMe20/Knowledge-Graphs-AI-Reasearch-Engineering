@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Basic Triple Pattern",
+    "description": "Get all subject-predicate-object triples (limited)",
+    "sparql": "SELECT ?subject ?predicate ?object\nWHERE {\n    ?subject ?predicate ?object\n}\nLIMIT 10"
+  },
+  {
+    "name": "Count All Triples",
+    "description": "Count total number of triples in the repository",
+    "sparql": "SELECT (COUNT(*) as ?count)\nWHERE {\n    ?s ?p ?o\n}"
+  },
+  {
+    "name": "List All Classes",
+    "description": "Find all RDF classes in the dataset",
+    "sparql": "SELECT DISTINCT ?class\nWHERE {\n    ?class a rdfs:Class\n}\nORDER BY ?class"
+  },
+  {
+    "name": "List All Properties",
+    "description": "Find all RDF properties in the dataset",
+    "sparql": "SELECT DISTINCT ?property\nWHERE {\n    ?property a rdf:Property\n}\nORDER BY ?property"
+  },
+  {
+    "name": "Instance Count by Class",
+    "description": "Count instances for each class",
+    "sparql": "SELECT ?class (COUNT(?instance) as ?count)\nWHERE {\n    ?instance a ?class\n}\nGROUP BY ?class\nORDER BY DESC(?count)"
+  },
+  {
+    "name": "Sample with Optional",
+    "description": "Example query using OPTIONAL pattern",
+    "sparql": "SELECT ?subject ?label ?comment\nWHERE {\n    ?subject rdfs:label ?label .\n    OPTIONAL { ?subject rdfs:comment ?comment }\n}\nLIMIT 20"
+  }
+] 

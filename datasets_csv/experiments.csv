@@ -1,0 +1,7 @@
+experiment_id,hypothesis_id,model_name,dataset,accuracy,f1_score,training_time,researcher,date,status
+EXP001,HYP001,res-net-50,ImageNet,0.76,0.74,24h,alice@company.com,1/15/2024,Completed
+EXP002,HYP001,vision-vit-base,ImageNet,0.81,0.79,18h,bob@company.com,1/20/2024,Completed
+EXP003,HYP002,sentiment-bert-v1,custom-reviews-10k,0.87,0.85,12h,charlie@company.com,2/2/2024,Failed
+EXP004,HYP002,document-bert,SQuAD,0.91,0.88,14h,dana@company.com,2/10/2024,Completed
+EXP005,HYP003,qa-t5-small,CustomQA,0.74,0.7,10h,bob@company.com,3/5/2024,Failed
+EXP006,HYP004,vision-vit-huge,ImageNet,0.83,0.81,30h,alice@company.com,3/20/2024,Completed

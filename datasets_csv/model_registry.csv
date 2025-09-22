@@ -1,0 +1,6 @@
+model_id,name,architecture,training_dataset,accuracy,inference_time_ms,status,version,deployment_endpoint
+MODEL001,sentiment-bert-v1,BERT-base,custom-reviews-10k,0.94,150,production,v1.0,api.company.com/sentiment
+MODEL002,vision-vit-base,ViT-Base,ImageNet,0.81,300,staging,v0.9,api.company.com/vision
+MODEL003,qa-t5-small,T5-Small,CustomQA,0.74,250,development,v0.8,api.company.com/qa
+MODEL004,document-bert,BERT-Large,SQuAD,0.91,200,production,v2.0,api.company.com/documents
+MODEL005,vision-vit-huge,ViT-Huge,ImageNet,0.83,350,production,v1.2,api.company.com/vision-h

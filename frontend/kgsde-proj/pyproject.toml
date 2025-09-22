@@ -1,0 +1,12 @@
+[project]
+name = "kgsde-proj"
+version = "0.1.0"
+description = "GraphDB Query Frontend with FastAPI Backend"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.32.4",
+    "fastapi>=0.104.0",
+    "uvicorn>=0.24.0",
+    "python-multipart>=0.0.6",
+]

@@ -1,0 +1,7 @@
+timestamp,service_name,model_version,requests_per_second,avg_latency_ms,error_rate,cost_per_hour,environment
+2024-06-01T10:00:00Z,sentiment-api,v1.0,150,180,0.001,2.5,production
+2024-06-01T11:00:00Z,sentiment-api,v1.0,200,190,0.002,2.75,production
+2024-06-02T09:00:00Z,vision-api,v0.9,120,300,0.005,2,staging
+2024-06-02T10:00:00Z,qa-api,v0.8,90,250,0.007,1.8,development
+2024-06-02T11:00:00Z,doc-api,v2.0,250,210,0.001,3.2,production
+2024-06-02T12:00:00Z,vision-h-api,v1.2,180,330,0.002,3.5,production

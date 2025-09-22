@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphDB Query Frontend</title>
+    <link rel="stylesheet" href="/static/styles/main.css">
+    <link rel="stylesheet" href="/static/styles/components.css">
+    <!-- CodeMirror for syntax highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">GraphDB Query Frontend</h1>
+                <div class="header-controls">
+                    <button class="btn btn-secondary" id="historyBtn">📋 History</button>
+                    <button class="btn btn-secondary" id="settingsBtn">⚙️ Settings</button>
+                    <div class="connection-status">
+                        <span class="status-indicator" id="connectionStatus"></span>
+                        <span class="status-text">Disconnected</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Connection Configuration Panel -->
+        <div class="config-panel" id="configPanel">
+            <div class="config-content">
+                <h3>Connection Configuration</h3>
+                <div class="config-form">
+                    <div class="form-group">
+                        <label for="endpoint">GraphDB Endpoint:</label>
+                        <input type="text" id="endpoint" value="http://localhost:7200" placeholder="http://localhost:7200">
+                    </div>
+                    <div class="form-group">
+                        <label for="repository">Repository:</label>
+                        <input type="text" id="repository" value="kgsde-proj" placeholder="repository-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username (optional):</label>
+                        <input type="text" id="username" placeholder="username">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password (optional):</label>
+                        <input type="password" id="password" placeholder="password">
+                    </div>
+                    <div class="form-actions">
+                        <button class="btn btn-primary" id="testConnectionBtn">Test Connection</button>
+                        <button class="btn btn-secondary" id="saveConfigBtn">Save Config</button>
+                        <button class="btn btn-secondary" id="closeConfigBtn">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Left Panel - Query Editor -->
+            <div class="left-panel">
+                <div class="panel-header">
+                    <h3>SPARQL Query Editor</h3>
+                    <div class="editor-controls">
+                        <select id="sampleQueries" class="select-dropdown">
+                            <option value="">Load Sample Query...</option>
+                        </select>
+                        <button class="btn btn-sm btn-secondary" id="clearQueryBtn">Clear</button>
+                        <div class="tooltip">
+                            <button class="btn btn-sm btn-primary" id="executeQueryBtn">Execute</button>
+                            <span class="tooltiptext">Ctrl+Enter to execute</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="query-editor-container">
+                    <textarea id="queryEditor" placeholder="Enter your SPARQL query here..."></textarea>
+                </div>
+                <div class="query-info">
+                    <div class="query-stats">
+                        <span id="queryLength">0 characters</span>
+                        <span id="executionTime"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel - Results -->
+            <div class="right-panel">
+                <div class="panel-header">
+                    <h3>Query Results</h3>
+                    <div class="results-controls">
+                        <div class="tab-container">
+                                                    <button class="tab-btn active" data-tab="table">Table</button>
+                        <button class="tab-btn" data-tab="raw">Raw JSON</button>
+                        </div>
+                        <div class="export-controls">
+                            <button class="btn btn-sm btn-secondary" id="exportCsvBtn">Export CSV</button>
+                            <button class="btn btn-sm btn-secondary" id="exportJsonBtn">Export JSON</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="results-container">
+                    <!-- Table View -->
+                    <div class="results-content active" id="tableView">
+                        <div class="table-container">
+                            <table class="results-table" id="resultsTable">
+                                <thead></thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                        <div class="pagination" id="pagination">
+                            <button class="btn btn-sm" id="prevPageBtn">Previous</button>
+                            <span class="page-info">Page <span id="currentPage">1</span> of <span id="totalPages">1</span></span>
+                            <button class="btn btn-sm" id="nextPageBtn">Next</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Raw JSON View -->
+                    <div class="results-content" id="rawView">
+                        <pre class="json-display" id="rawResults"></pre>
+                    </div>
+                    
+
+                </div>
+                <div class="results-info">
+                    <div class="results-stats">
+                        <span id="resultCount">No results</span>
+                        <span id="queryExecutionTime"></span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Status/Notification Area -->
+        <div class="status-bar">
+            <div class="status-messages" id="statusMessages">
+                Ready to execute queries
+            </div>
+            <div class="loading-indicator" id="loadingIndicator">
+                <div class="spinner"></div>
+                <span>Executing query...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="spinner-large"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/sparql/sparql.min.js"></script>
+    
+    <!-- Our JavaScript modules -->
+    <script src="/static/js/utils.js"></script>
+    <script src="/static/js/sparql-client.js"></script>
+    <script src="/static/js/results-renderer.js"></script>
+    <script src="/static/js/query-builder.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html> 
